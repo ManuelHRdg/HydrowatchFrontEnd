@@ -20,6 +20,7 @@ const data = fetchData = () => {
       });
   };*/
 
+  const { tanque, fecha } = useParams();
   async function getData(url){
     const response =await fetch(url);
     return response.json();
@@ -28,12 +29,12 @@ const data = fetchData = () => {
   const losDatos = await getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
 
 export const HistorialNiveles = () => {
-    const { tanque, fecha } = useParams();
+    //const { tanque, fecha } = useParams();
     //const dataTanques = [];
     //const [misdatos, setdata] = useState();
     const datos = [];
 
-const data = () => {
+/*const data = () => {
     fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, {
       method: 'GET',
       headers: {
@@ -43,11 +44,11 @@ const data = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        /*
+        
         for(let i=0; i<data.length; i++){
             console.log(data[i].nivel);
             datos[i].nivel = parseInt(data[i].nivel);
-        }*/
+        }
         //console.log(data[0].nivel);
         //console.log(data[0].tiempo);
         //console.log({data});
@@ -58,11 +59,11 @@ const data = () => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  };
+  };*/
   //const dataTanques = [];
   //data( dataTanques => console.log({data}));
   //setInterval(data, 10000);
-  data();
+  //data();
 
   
   //const datos = [];
