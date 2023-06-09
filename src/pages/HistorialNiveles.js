@@ -20,6 +20,13 @@ const data = fetchData = () => {
       });
   };*/
 
+  async function getData(url){
+    const response =await fetch(url);
+    return response.json();
+  }
+
+  const losDatos = await getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
+
 export const HistorialNiveles = () => {
     const { tanque, fecha } = useParams();
     //const dataTanques = [];
@@ -56,6 +63,8 @@ const data = () => {
   //data( dataTanques => console.log({data}));
   //setInterval(data, 10000);
   data();
+
+  
   //const datos = [];
   /*for(let i=0; i<dataTanques.length; i++){
     datos[i] = dataTanques[i];
@@ -73,7 +82,7 @@ const data = () => {
     return (
         <>
         <h1>Historial</h1>
-        <LineChart width={600} height={300} data={datos}>
+        <LineChart width={600} height={300} data={losDatos}>
             <Line type="monotone" dataKey="nivel" stroke="#2196F3" strokeWidth={3}></Line>
         </LineChart>
         </>
