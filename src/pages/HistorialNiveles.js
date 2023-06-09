@@ -79,6 +79,7 @@ const data = () => {
   //const datos = [];
   //datos = dataTanques[0];
   console.log(datos);
+  console.log(losDatos);
     return (
         <>
         <h1>Historial</h1>
