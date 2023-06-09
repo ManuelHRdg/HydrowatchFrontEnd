@@ -20,19 +20,19 @@ const data = fetchData = () => {
       });
   };*/
 
-  const { tanque, fecha } = useParams();
-  async function getData(url){
-    const response =await fetch(url);
-    return response.json();
-  }
-
-  const losDatos = await getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
 
 export const HistorialNiveles = () => {
-    //const { tanque, fecha } = useParams();
+    const { tanque, fecha } = useParams();
     //const dataTanques = [];
     //const [misdatos, setdata] = useState();
     const datos = [];
+
+    async function getData(url){
+      const response =await fetch(url);
+      return response.json();
+    }
+  
+    const losDatos = getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
 
 /*const data = () => {
     fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, {
