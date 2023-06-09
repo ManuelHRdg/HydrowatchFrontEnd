@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Line, LineChart } from "recharts";
-//import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 /*const { tanque, fecha } = useParams();
 const data = fetchData = () => {
