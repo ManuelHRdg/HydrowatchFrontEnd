@@ -14,7 +14,7 @@ function App() {
 
 
   const fetchData = () => {
-    fetch('http://localhost:3500/api/hydrowatch/ManuManito', {
+    fetch('http://hydrowatchrest-production.up.railway.app/api/hydrowatch/Manumanito', {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
