@@ -26,17 +26,7 @@ export const HistorialNiveles = () => {
     //const dataTanques = [];
     //const [misdatos, setdata] = useState();
     const datos = [];
-    let jsondata;
-    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha).then(
-      function(u){ return u.json();}
-    ).then(
-      function(json){
-        jsondata = json;
-      }
-    );
-
-    console.log(jsondata);
-
+    
     /*function getData(url,cb){
       fetch(url)
       .then(response => response.json())
@@ -45,24 +35,20 @@ export const HistorialNiveles = () => {
   
     //getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, (data) => console.log({data}));
 
-/*const data = () => {
+const data = () => {
     fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
       },
   }) // Replace with your API endpoint
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
+      .then((response) => {return response.json()})
+      .then(data => {
+        //json.map()
         
-        for(let i=0; i<data.length; i++){
-            console.log(data[i].nivel);
-            datos[i].nivel = parseInt(data[i].nivel);
-        }
         //console.log(data[0].nivel);
         //console.log(data[0].tiempo);
-        //console.log({data});
+        console.log({data});
         //dataTanques.push(data);
         //console.log(dataTanques[0]);
         //setdata(data?.data);
@@ -70,7 +56,7 @@ export const HistorialNiveles = () => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  };*/
+  };
   //const dataTanques = [];
   //data( dataTanques => console.log({data}));
   //setInterval(data, 10000);
