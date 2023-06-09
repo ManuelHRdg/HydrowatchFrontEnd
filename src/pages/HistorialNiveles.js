@@ -70,6 +70,23 @@ export const HistorialNiveles = () => {
   }*/
   //console.log(JSON.stringify(dataTanques));
   //datos = JSON.stringify(dataTanques);
+
+
+  function recuperarDatos() {
+    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/ManuManito/2023-06-09')
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      console.log(data.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
+
+  recuperarDatos();
+
   const estosdatos = [
     {tiempo: "05:22:31", nivel: 23},
     {tiempo: "05:23:31", nivel: 30},
