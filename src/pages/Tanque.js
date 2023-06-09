@@ -12,7 +12,7 @@ export const Tanque = () => {
 
 
   const fetchData = () => {
-    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Manumanito', {
+    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/ManuManito', {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
