@@ -27,12 +27,13 @@ export const HistorialNiveles = () => {
     //const [misdatos, setdata] = useState();
     const datos = [];
 
-    async function getData(url){
-      const response =await fetch(url);
-      return response.json();
+    function getData(url,cb){
+      fetch(url)
+      .then(response => response.json())
+      .then(result => cb(result));
     }
   
-    const losDatos = getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
+    getData('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, (data) => console.log({data}));
 
 /*const data = () => {
     fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, {
