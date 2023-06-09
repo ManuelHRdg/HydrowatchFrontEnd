@@ -22,7 +22,7 @@ export const Tanque = () => {
       .then((data) => {
         console.log(data[0].nivel);
         // Assuming your data has a waterLevel property
-        setNivel(100 - data[0].nivel);
+        setNivel((25 - data[0].nivel)*100/25);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
