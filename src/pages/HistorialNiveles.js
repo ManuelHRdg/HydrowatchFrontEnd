@@ -1,5 +1,5 @@
 //import { useParams } from "react-router-dom";
-import { Line, LineChart } from "recharts";
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 //import React, { useEffect, useState } from 'react';
 
 /*const { tanque, fecha } = useParams();
@@ -71,12 +71,12 @@ export const HistorialNiveles = () => {
   //console.log(JSON.stringify(dataTanques));
   //datos = JSON.stringify(dataTanques);
   const estosdatos = [
-    {hola: "hola", nivel: 23},
-    {hola: "hola", nivel: 30},
-    {hola: "hola", nivel: 40},
-    {hola: "hola", nivel: 23},
-    {hola: "hola", nivel: 23},
-    {hola: "hola", nivel: 23}
+    {tiempo: "05:22:31", nivel: 23},
+    {tiempo: "05:23:31", nivel: 30},
+    {tiempo: "05:24:31", nivel: 40},
+    {tiempo: "05:25:31", nivel: 23},
+    {tiempo: "05:26:31", nivel: 23},
+    {tiempo: "05:27:31", nivel: 23}
   ];
 
   estosdatos.push({hola: "hola", nivel: 50});
@@ -89,6 +89,8 @@ export const HistorialNiveles = () => {
         <h1>Historial</h1>
         <LineChart width={600} height={300} data={estosdatos}>
             <Line type="monotone" dataKey="nivel" stroke="#2196F3" strokeWidth={3}></Line>
+            <CartesianGrid stroke="#ccc"></CartesianGrid>
+            <XAxis dataKey="tiempo"></XAxis>
         </LineChart>
         </>
     );
