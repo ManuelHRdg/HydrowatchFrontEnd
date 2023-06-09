@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 
 function App() {
 
   const [nivel, setNivel] = useState(0);
-  const agua = 0;
+  //const agua = 0;
 
   useEffect(() => {
     fetchData();
