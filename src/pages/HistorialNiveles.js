@@ -71,11 +71,11 @@ const data = () => {
   }*/
   //console.log(JSON.stringify(dataTanques));
   //datos = JSON.stringify(dataTanques);
- /* const datos = [
+  const estosdatos = [
     {hola: "hola", nivel: 23},
     {hola: "hola", nivel: 30},
     {hola: "hola", nivel: 40}
-  ];*/
+  ];
   //const datos = [];
   //datos = dataTanques[0];
   console.log(datos);
@@ -83,7 +83,7 @@ const data = () => {
     return (
         <>
         <h1>Historial</h1>
-        <LineChart width={600} height={300} data={losDatos}>
+        <LineChart width={600} height={300} data={estosdatos}>
             <Line type="monotone" dataKey="nivel" stroke="#2196F3" strokeWidth={3}></Line>
         </LineChart>
         </>
