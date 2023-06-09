@@ -11,7 +11,7 @@ export const Rutas = () => {
             <Route path="/" exact element={<Navigate to="/Tanque"/>}>
             </Route>
 
-            <Route path="/Tanque" element={<Tanque/>}>
+            <Route path="/Tanque/:tanque" element={<Tanque/>}>
             </Route>
 
             <Route path="/Historial/:tanque/:fecha" element={<HistorialNiveles/>}>

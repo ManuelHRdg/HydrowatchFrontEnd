@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 //import logo from './logo.svg';
 import './Tanque.css';
 
 export const Tanque = () => {
     const [nivel, setNivel] = useState(0);
+    const { tanque } = useParams();
   //const agua = 0;
 
   useEffect(() => {
@@ -12,7 +14,7 @@ export const Tanque = () => {
 
 
   const fetchData = () => {
-    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/ManuManito', {
+    fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/' + tanque, {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
