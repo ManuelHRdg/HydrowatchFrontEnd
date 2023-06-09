@@ -31,6 +31,8 @@ function App() {
       });
   };
 
+  setInterval(fetchData, 10000);
+
 
   return (
     <div className="App">
