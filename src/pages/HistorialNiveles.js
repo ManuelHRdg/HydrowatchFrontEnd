@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Line, LineChart } from "recharts";
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 
 /*const { tanque, fecha } = useParams();
 const data = fetchData = () => {
@@ -22,8 +22,9 @@ const data = fetchData = () => {
 
 export const HistorialNiveles = () => {
     const { tanque, fecha } = useParams();
-    const dataTanques = [];
-    const [misdatos, setdata] = useState();
+    //const dataTanques = [];
+    //const [misdatos, setdata] = useState();
+    const datos = [];
 
 const data = () => {
     fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha, {
@@ -34,36 +35,33 @@ const data = () => {
   }) // Replace with your API endpoint
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
+        /*
+        for(let i=0; i<data.length; i++){
+            console.log(data[i].nivel);
+            datos[i].nivel = parseInt(data[i].nivel);
+        }*/
         //console.log(data[0].nivel);
         //console.log(data[0].tiempo);
         //console.log({data});
-        dataTanques.push(data);
+        //dataTanques.push(data);
         //console.log(dataTanques[0]);
-        setdata(data?.data);
+        //setdata(data?.data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
   };
-  useEffect(() => {
-    const fetchDatas = async () => {
-      const res = await fetch('https://hydrowatchrest-production.up.railway.app/api/hydrowatch/Historial/' + tanque + '/' + fecha);
-      const misdatos = await res.json();
-      setdata(misdatos?.misdatos);
-      //console.log(misdatos.length);
-    };
-    fetchDatas();
-  }, []);
   //const dataTanques = [];
   //data( dataTanques => console.log({data}));
   //setInterval(data, 10000);
   data();
-  const datos = [];
+  //const datos = [];
   /*for(let i=0; i<dataTanques.length; i++){
     datos[i] = dataTanques[i];
   }*/
-  console.log(JSON.stringify(dataTanques));
-  datos = JSON.stringify(dataTanques);
+  //console.log(JSON.stringify(dataTanques));
+  //datos = JSON.stringify(dataTanques);
  /* const datos = [
     {hola: "hola", nivel: 23},
     {hola: "hola", nivel: 30},
