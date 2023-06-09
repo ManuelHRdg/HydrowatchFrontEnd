@@ -73,7 +73,10 @@ export const HistorialNiveles = () => {
   const estosdatos = [
     {hola: "hola", nivel: 23},
     {hola: "hola", nivel: 30},
-    {hola: "hola", nivel: 40}
+    {hola: "hola", nivel: 40},
+    {hola: "hola", nivel: 23},
+    {hola: "hola", nivel: 23},
+    {hola: "hola", nivel: 23}
   ];
 
   estosdatos.push({hola: "hola", nivel: 50});
