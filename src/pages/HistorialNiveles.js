@@ -75,6 +75,8 @@ export const HistorialNiveles = () => {
     {hola: "hola", nivel: 30},
     {hola: "hola", nivel: 40}
   ];
+
+  estosdatos.push({hola: "hola", nivel: 50});
   //const datos = [];
   //datos = dataTanques[0];
   console.log(datos);
