@@ -43,12 +43,12 @@ const data = () => {
       },
   }) // Replace with your API endpoint
       .then((response) => {return response.json()})
-      .then(data => {
+      .then(response => {
         //json.map()
         
         //console.log(data[0].nivel);
         //console.log(data[0].tiempo);
-        console.log({data});
+        console.log(response);
         //dataTanques.push(data);
         //console.log(dataTanques[0]);
         //setdata(data?.data);
