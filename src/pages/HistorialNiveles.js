@@ -60,7 +60,7 @@ const data = () => {
   //const dataTanques = [];
   //data( dataTanques => console.log({data}));
   //setInterval(data, 10000);
-  //data();
+  data();
 
   
   //const datos = [];
