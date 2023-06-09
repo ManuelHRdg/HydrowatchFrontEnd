@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from 'react';
 //import logo from './logo.svg';
-import './App.css';
-import { Rutas } from './Routes';
+import './Tanque.css';
 
-
-function App() {
-
-  return (
-    <Rutas/>
-  );
-
-  /*
-  const [nivel, setNivel] = useState(0);
+export const Tanque = () => {
+    const [nivel, setNivel] = useState(0);
   //const agua = 0;
 
   useEffect(() => {
@@ -64,11 +56,7 @@ function App() {
         >
           Learn React
         </a>
-      </header> *//*}
+      </header> */}
     </div>
-  );*/
-
-  
+  );
 }
-
-export default App;
